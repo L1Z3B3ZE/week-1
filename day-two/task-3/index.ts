@@ -9,7 +9,7 @@ type TargetData = SourceData & { //та же процедура для доп. �
     url: string;
 };
 
-const createBook = (source: SourceData): TargetData => {
+function CreateBook(source: SourceData): TargetData {
     return {
         ...source, //распаковка всех свойств объекта source
 
@@ -25,5 +25,5 @@ const source: SourceData = {
     author: "Douglas Adams",
 };
 
-const target = createBook(source);
+const target = CreateBook(source);
 console.log(target);
