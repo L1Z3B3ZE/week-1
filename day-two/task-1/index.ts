@@ -8,7 +8,7 @@ const data = {
     age: 25,
     address: "",
     phone: 937-235,
-    email: null,
+    email: undefined,
     notes: null,
     salary: 75000,
     skills: ["JavaScript", "TypeScript", "React"],
