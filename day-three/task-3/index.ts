@@ -1,47 +1,45 @@
-// type DataType = {
-//   id: string; // uuid = string
-//   name: string;
-//   phone: string;
-//   email: string;
-//   location: string;
-//   status: "active" | "delete";
-// }[]
-//так как нужно только вернуть данные с апи, они скорее всего уже проверены на серверной стороне, поэтому решила отказаться от написания "type DataType"
-
+type DataType = {
+    id: string; // uuid = string
+    name: string;
+    phone: string;
+    email: string;
+    location: string;
+    status: "active" | "delete";
+}
 async function getFakeApiData() {
-    const data = [
+    const data: DataType[] = [
         {
-            id: "1",
+            id: "f47ac10b-58cc-4372-a567-0e02b2c3d479",
             name: "John Doe",
-            phone: "123456789",
+            phone: "+123456789",
             email: "john.doe@example.com",
             location: "New York",
             status: "active",
         },
         {
-            id: "2",
+            id: "9b1deb4d-df0b-4b9f-a997-43c8ff202b9a",
             name: "Jane Smith",
-            phone: "123456789",
+            phone: "+123456789",
             email: "jane.smith@example.com",
             location: "Los Angeles",
             status: "active",
         },
         {
-            id: "3",
-            name: "Bill Gates",
-            phone: "555-555-5555",
-            email: "bill.gates@microsoft.com",
+            id: "4c8e9bf7-650a-4e2f-a3ea-05ef1e9f25da",
+            name: "Peter Parker",
+            phone: "+34536343290",
+            email: "peter.parker@example.com",
             location: "Seattle",
             status: "delete",
         },
     ];
     return new Promise(resolve => {
-        setTimeout(() => resolve(data), 2000)
+        setTimeout(() => resolve(data), 5000)
     })
-        .then((result) => {
-            console.log(result)
-        })
+
 }
 
-getFakeApiData()
+getFakeApiData().then((result) => {
+    console.log(result)
+})
 
