@@ -36,7 +36,7 @@ const users: UserType[] = [
 
 async function cleanUserData(users: UserType[]): Promise<UserType[] | unknown> {
     try {
-        if ((Math.floor(Math.random() * 100) + 1) < 15) {
+        if ((Math.floor(Math.random() * 100) + 1) < 10) {
             throw new Error("Произошла случайная ошибка");
         }
         const filteredActiveUsers = users
